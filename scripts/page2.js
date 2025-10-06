@@ -9,11 +9,9 @@ let ready = false;
 let startTime;
 let timeoutId;
 
-// таблиця
 let resultTable = document.getElementById("result-table");
 
-// звук
-let beep = new Audio("./../sounds/beep_short.mp3"); // поклади свій файл у папку sounds
+let beep = new Audio("./../sounds/beep_short.mp3");
 
 button.addEventListener("click", function() {
     if (step === 0) {
@@ -25,7 +23,6 @@ button.addEventListener("click", function() {
     }
 });
 
-// почати цикл
 function startCycle() {
     step = 1;
     buttonText.textContent = "Фіксація";
@@ -33,16 +30,14 @@ function startCycle() {
     nextWait();
 }
 
-// очікування сигналу
 function nextWait() {
     waiting = true;
     ready = false;
 
-    let delay = Math.floor(Math.random() * 1600) + 800; // 500–1000 мс
+    let delay = Math.floor(Math.random() * 1600) + 800;
     timeoutId = setTimeout(playBeep, delay);
 }
 
-// відтворення сигналу
 function playBeep() {
     beep.currentTime = 0;
     beep.play();
@@ -51,7 +46,6 @@ function playBeep() {
     ready = true;
 }
 
-// натиснув вчасно
 function recordResult() {
     let reactionTime = Date.now() - startTime;
     results.push(reactionTime);
@@ -68,14 +62,12 @@ function recordResult() {
     }
 }
 
-// якщо натиснув занадто рано
 function resetTest(message) {
     clearTimeout(timeoutId);
     alert(message);
     resetAll();
 }
 
-// скидання
 function resetAll() {
     step = 0;
     results = [];
@@ -85,17 +77,12 @@ function resetAll() {
     ready = false;
 }
 
-// ------------------ Обчислення ------------------
-
 function fillTable() {
-    // Мін і Макс
     let min = Math.min(...results);
     let max = Math.max(...results);
 
-    // Середнє
     let avg = results.reduce((a, b) => a + b, 0) / results.length;
 
-    // Медіана
     let sorted = [...results].sort((a, b) => a - b);
     let mid = Math.floor(sorted.length / 2);
     let median =
@@ -103,12 +90,10 @@ function fillTable() {
             ? sorted[mid]
             : (sorted[mid - 1] + sorted[mid]) / 2;
 
-    // Стандартне відхилення
     let variance =
         results.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / results.length;
     let stdDev = Math.sqrt(variance);
 
-    // Заповнюємо таблицю
     document.querySelector('tr[data-id="r1"] td:last-child').textContent =
         results.join(" мс, ") + " мс";
     document.querySelector('tr[data-id="r2"] td:last-child').textContent =
@@ -121,11 +106,9 @@ function fillTable() {
         stdDev.toFixed(2) + " мс";
 }
 
-// ------------------ Анімація ------------------
-
 function animateTable() {
     resultTable.classList.add("highlight");
     setTimeout(() => {
         resultTable.classList.remove("highlight");
-    }, 2000); // ефект триватиме 2 секунди
+    }, 2000);
 }

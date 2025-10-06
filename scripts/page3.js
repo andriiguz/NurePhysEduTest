@@ -8,7 +8,7 @@ let timerInterval = null;
 let clickCount = 0;
 let isRunning = false;
 let clickTimes = [];
-let chartInstance = null; // чтобы перерисовывать график
+let chartInstance = null;
 
 btn.addEventListener("click", () => {
     if (!isRunning) {
@@ -19,7 +19,6 @@ btn.addEventListener("click", () => {
 });
 
 function startTest() {
-    // очистка данных
     clickCount = 0;
     clickTimes = [];
     clearTable();
@@ -117,7 +116,7 @@ function buildChart() {
             responsive: true,
             plugins: {
                 legend: {
-                    display: false // 🔹 скрываем легенду
+                    display: false
                 }
             },
             scales: {
