@@ -9,6 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="./img/favicon.svg"/>
   <style>
 		@import "./base/reset.css";
+		@import "./base/toggle.css";
 		@import "./base/themes.css";
 
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
@@ -132,6 +133,54 @@
           width: 250px;
           text-align: center;
       }
+	  
+	  :root[data-theme="light"] {
+    --theme-body-bg-color: var(--color-neutral-100);
+    --theme-body-text-color: var(--color-darkneutral-100);
+
+    --theme-a: var(--color-darkneutral-100);
+
+    --theme-nav-link-bg-color: var(--color-teal-500);
+    --theme-nav-link-bg-color_hover: var(--color-teal-600);
+
+    --theme-main-screen-bg-color: var(--color-teal-100);
+    --theme-main-screen-border: 3px solid var(--color-teal-400);
+
+    --theme-main-btn-border: 3px solid var(--color-neutral-200);
+    --theme-main-btn-bg-color: var(--color-neutral-300);
+
+    --theme-main-btn-bg-color_hover: var(--color-neutral-400);
+
+    --theme-flash-bg-color1: var(--color-yellow-100);
+    --theme-flash-bg-color2: var(--color-green-100);
+
+    --theme-screen-stop-color: var(--color-red-600);
+    --theme-screen-wait-color: var(--color-green-600);
+}
+
+:root[data-theme="dark"] {
+    --theme-body-bg-color: var(--color-darkneutral-100);
+    --theme-body-text-color: var(--color-neutral-100);
+
+    --theme-a: var(--color-neutral-100);
+
+    --theme-nav-link-bg-color: var(--color-teal-600);
+    --theme-nav-link-bg-color_hover: var(--color-teal-500);
+
+    --theme-main-screen-bg-color: var(--color-teal-1000);
+    --theme-main-screen-border: 3px solid var(--color-teal-700);
+
+    --theme-main-btn-border: 3px solid var(--color-darkneutral-200);
+    --theme-main-btn-bg-color: var(--color-darkneutral-300);
+
+    --theme-main-btn-bg-color_hover: var(--color-darkneutral-400);
+
+    --theme-flash-bg-color1: var(--color-yellow-1000);
+    --theme-flash-bg-color2: var(--color-green-1000);
+
+    --theme-screen-stop-color: var(--color-red-500);
+    --theme-screen-wait-color: var(--color-green-500);
+}
   </style>
 </head>
 <body>
