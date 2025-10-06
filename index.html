@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестування психофізіологічних якостей</title>
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg"/>
+  <style>
+      @import "./css/base/reset.css";
+      @import "./css/base/toggle.css";
+      @import "./css/base/themes.css";
+
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+      :root {
+          /* LIGHT THEME */
+          --color-teal-100: #E7F9FF;
+          --color-teal-500: #42B2D7;
+          --color-teal-700: #227D9B;
+
+          --color-green-600: #22A06B;
+          --color-red-600: #E2483D;
+
+          --color-neutral-100: #F7F8F9;
+          --color-neutral-200: #F1F2F4;
+          --color-neutral-300: #DCDFE4;
+          --color-neutral-400: #B3B9C4;
+
+          --color-yellow-100: #FFF7D6;
+          --color-green-100: #DCFFF1;
+
+
+          /* DARK THEME */
+
+          --color-teal-1000: #1E3137;
+          --color-teal-600: #2898BD;
+          --color-teal-400: #6CC3E0;
+
+          --color-green-500: #2ABB7F;
+          --color-red-500: #F15B50;
+
+          --color-darkneutral-100: #1D2125;
+          --color-darkneutral-200: #22272B;
+          --color-darkneutral-300: #2C333A;
+          --color-darkneutral-400: #454F59;
+
+          --color-yellow-1000: #332E1B;
+          --color-green-1000: #1C3329;
+
+
+          --font-base: "Roboto";
+      }
+
+      body {
+          font-family: var(--font-base), sans-serif;
+          transition: all 0.2s ease-in-out 0ms;
+
+          background-color: var(--theme-body-bg-color);
+          color: var(--theme-body-text-color);
+      }
+
+      a {
+          color: var(--theme-a);
+      }
+
+      .container {
+          margin: 0 auto;
+          padding: 0 15px;
+
+          max-width: 500px;
+          width: 100%;
+      }
+
+      .header-row {
+          padding: 20px 0;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .header-row ul {
+          display: flex;
+          flex-direction: column;
+
+          font-family: var(--font-base), sans-serif;
+          font-weight: 700;
+      }
+
+      .header-logo img {
+          width: 120px;
+          margin-bottom: 10px;
+      }
+
+      .header-row ul li {
+          margin-top: 10px;
+      }
+
+      .nav-link {
+          width: 250px;
+          text-align: center;
+
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-weight: 600;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+          transition: all 0.2s ease-in-out 0ms;
+          background-color: var(--theme-nav-link-bg-color);
+          color: var(--color-neutral-100);
+      }
+
+      .nav-link:hover {
+          background-color: var(--theme-nav-link-bg-color_hover);
+      }
+
+
+      .nav-icon {
+          display: inline-block;
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+
+          filter: brightness(0) invert(1);
+      }
+
+      .nav-link span {
+          width: 250px;
+          text-align: center;
+      }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="header-row">
+      <a href="./index.html" class="header-logo">
+        <img id="logo" src="./img/logo-dark.svg" alt="Логотип"/>
+      </a>
+      <ul>
+        <li>
+          <label for="switch" class="switch">
+            <input id="switch" type="checkbox"/>
+            <span class="slider"></span>
+            <span class="decoration"></span>
+          </label>
+        </li>
+        <li>
+          <a href="./pages/ReactionTimeToLight.html" class="nav-link">
+            <img src="./img/002-idea.png" alt="" class="nav-icon">
+            <span>Швидкість реакції на світло</span>
+          </a>
+        </li>
+        <li>
+          <a href="./pages/ReactionTimeToSound.html" class="nav-link">
+            <img src="./img/001-sound.png" alt="" class="nav-icon">
+            <span>Швидкість реакції на звук</span>
+          </a>
+        </li>
+        <li>
+          <a href="./pages/FingerTapTest.html" class="nav-link">
+            <img src="./img/003-tap.png" alt="" class="nav-icon">
+            <span>Тепінг тест</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</body>
+<script src="./../scripts/change_theme.js"></script>
+</html>

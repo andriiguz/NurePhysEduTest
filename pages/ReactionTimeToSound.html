@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестування швидкості реакції на звук</title>
+  <link rel="stylesheet" href="./../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="./../img/favicon.svg"/>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="header-row">
+      <a href="./../index.html" class="header-logo">
+        <img id="logo" src="./../img/logo-dark.svg" alt="Логотип" />
+      </a>
+      <ul>
+        <li>
+          <a href="ReactionTimeToLight.html" class="nav-link">
+            <img src="./../img/002-idea.png" alt="" class="nav-icon">
+            <span>Світло</span>
+          </a>
+        </li>
+        <li>
+          <a href="./../pages/ReactionTimeToSound.html" class="nav-link">
+            <img src="./../img/001-sound.png" alt="" class="nav-icon">
+            <span>Звук</span>
+          </a>
+        </li>
+        <li>
+          <a href="FingerTapTest.html" class="nav-link">
+            <img src="./../img/003-tap.png" alt="" class="nav-icon">
+            <span>Тепінг</span>
+          </a>
+        </li>
+        <li>
+          <label for="switch" class="switch">
+            <input id="switch" type="checkbox"/>
+            <span class="slider"></span>
+            <span class="decoration"></span>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="content-block">
+      <h1>Швидкість реакції на звук</h1>
+      <span id="counter">Крок 0 / 5</span>
+      <span id="screen-message">Почни тест, після чого натискай на кнопку коли будеш чути характерний звук</span>
+
+      <button id="main-btn" class="button_inSoundPage">
+        <span id="main-btn-text">Почати тест</span>
+      </button>
+    </div>
+    <table id="result-table">
+      <tbody>
+      <tr data-id="r1">
+        <td>Час реакцій</td>
+        <td></td>
+      </tr>
+      <tr data-id="r2">
+        <td>Мін/Макс</td>
+        <td></td>
+      </tr>
+      <tr data-id="r3">
+        <td>Середнє значення</td>
+        <td></td>
+      </tr>
+      <tr data-id="r4">
+        <td>Медіанне значення</td>
+        <td></td>
+      </tr>
+      <tr data-id="r5">
+        <td>Стандартне відхилення</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+</body>
+<script src="./../scripts/loader.js"></script>
+<script src="./../scripts/change_theme.js"></script>
+<script src="./../scripts/page2.js"></script>
+</html>
