@@ -6,7 +6,6 @@
     --color-teal-500: #42B2D7;
     --color-teal-700: #227D9B;
 
-    /*--color-yellow-600: #B38600;*/
     --color-green-600: #22A06B;
     --color-red-600: #E2483D;
 
@@ -25,14 +24,15 @@
     --color-teal-600: #2898BD;
     --color-teal-400: #6CC3E0;
 
-    /*--color-yellow-500: #CF9F02;*/
     --color-green-500: #2ABB7F;
     --color-red-500: #F15B50;
 
+    --color-darkneutral--100: #101214;
     --color-darkneutral-100: #1D2125;
     --color-darkneutral-200: #22272B;
     --color-darkneutral-300: #2C333A;
     --color-darkneutral-400: #454F59;
+    --color-darkneutral-500: #596773;
 
     --color-yellow-1000: #332E1B;
     --color-green-1000: #1C3329;
@@ -97,7 +97,7 @@ a {
 }
 
 .nav-link:hover {
-     background-color: var(--theme-nav-link-bg-color_hover);
+    background-color: var(--theme-nav-link-bg-color_hover);
 }
 
 
@@ -187,6 +187,27 @@ a {
 
 #result-table.highlight {
     animation: flash 2s ease-in-out;
+}
+
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 99%;
+    font-size: 0.9rem;
+
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:hover {
+    text-decoration: underline;
 }
 
 @keyframes flash {

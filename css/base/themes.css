@@ -3,6 +3,8 @@
     --theme-body-text-color: var(--color-darkneutral-100);
 
     --theme-a: var(--color-darkneutral-100);
+    --footer-bg-color: var(--color-neutral-300);
+    --footer-text-color: var(--color-darkneutral-100);
 
     --theme-nav-link-bg-color: var(--color-teal-500);
     --theme-nav-link-bg-color_hover: var(--color-teal-600);
@@ -27,6 +29,8 @@
     --theme-body-text-color: var(--color-neutral-100);
 
     --theme-a: var(--color-neutral-100);
+    --footer-bg-color: #101214;
+    --footer-text-color: var(--color-darkneutral-500);
 
     --theme-nav-link-bg-color: var(--color-teal-600);
     --theme-nav-link-bg-color_hover: var(--color-teal-500);

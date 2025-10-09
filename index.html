@@ -9,12 +9,12 @@
   <link rel="icon" type="image/svg+xml" href="./img/favicon.svg"/>
   <style>
 
-  
-		@import "./css/base/reset.css";
-		@import "./css/base/toggle.css";
-		@import "./css/base/themes.css";
-		
-		  :root {
+
+      @import "./css/base/reset.css";
+      @import "./css/base/toggle.css";
+      @import "./css/base/themes.css";
+
+      :root {
           /* LIGHT THEME */
           --color-teal-100: #E7F9FF;
           --color-teal-500: #42B2D7;
@@ -55,7 +55,6 @@
 
       @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
-      
 
       body {
           font-family: var(--font-base), sans-serif;
@@ -137,8 +136,25 @@
           width: 250px;
           text-align: center;
       }
-	  
-	  
+
+      footer {
+          text-align: center;
+          padding: 1rem 0;
+          background-color: var(--footer-bg-color);
+          color: var(--footer-text-color);
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+      }
+
+      footer p {
+          margin: 0;
+      }
+
+      footer p:hover {
+          text-decoration: underline;
+      }
+
+
   </style>
 </head>
 <body>
@@ -178,30 +194,35 @@
     </nav>
   </div>
 </header>
+<footer>
+  <a href="https://www.linkedin.com/in/andrii-huz-8985822a6/"><p>Вебдодаток розроблено студентом групи СПРм-25-1 — Гузь
+    Андрій Олегович © 2025 </p></a>
+</footer>
+
 </body>
 <script>
-const switcher = document.getElementById("switch");
-const root = document.documentElement;
-const logo = document.getElementById("logo");
+    const switcher = document.getElementById("switch");
+    const root = document.documentElement;
+    const logo = document.getElementById("logo");
 
-const logoLight = new Image();
-logoLight.src = "./img/logo-light.svg";
+    const logoLight = new Image();
+    logoLight.src = "./img/logo-light.svg";
 
-const logoDark = new Image();
-logoDark.src = "./img/logo-dark.svg";
+    const logoDark = new Image();
+    logoDark.src = "./img/logo-dark.svg";
 
-const savedTheme = localStorage.getItem("theme") || "dark";
-root.setAttribute("data-theme", savedTheme);
-switcher.checked = savedTheme === "light";
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    root.setAttribute("data-theme", savedTheme);
+    switcher.checked = savedTheme === "light";
 
-logo.src = savedTheme === "light" ? logoLight.src : logoDark.src;
+    logo.src = savedTheme === "light" ? logoLight.src : logoDark.src;
 
-switcher.addEventListener("change", () => {
-    const newTheme = switcher.checked ? "light" : "dark";
-    root.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    logo.src = newTheme === "light" ? logoLight.src : logoDark.src;
-});
+    switcher.addEventListener("change", () => {
+        const newTheme = switcher.checked ? "light" : "dark";
+        root.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        logo.src = newTheme === "light" ? logoLight.src : logoDark.src;
+    });
 
 </script>
 </html>
