@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Реакція на світло</title>
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav>
+      <div class="header-logo">
+        <a href="./index.html"><img src="./img/logo-light.svg" alt="logo"></a>
+      </div>
+      <ul>
+        <li>
+          <button class="nav-link main-start-button" id="goToSection">
+            <img src="./img/01.svg" alt="">
+            <span>Каталог тестів</span>
+          </button>
+        </li>
+        <li><a href="./results_page.html" class="nav-link nav-secondary-link"><img src="./img/02.svg" alt=""><span>Мої результати</span></a>
+        </li>
+        <li><a href="./about_us.html" class="nav-link nav-secondary-link"><img src="./img/03.svg" alt=""><span>Про проєкт</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="text-and-image">
+      <div class="header-text">
+        <h1>Дізнайся більше про свої когнітивні можливості</h1>
+        <p>Пройди кілька простих тестів і оціни швидкість реакції, концентрацію та координацію</p>
+      </div>
+      <img src="./img/undraw_ai-answers_uxgx.svg" alt="Ілюстрація">
+    </div>
+
+    <div class="grid" id="target">
+      <div class="grid-item">
+        <div class="grid-item-test item1">
+          <h2>Реакція на світло</h2>
+          <p>Перевір швидкість зорової реакції та концентрацію уваги</p>
+          <div class="grid-item-test-tags">
+            <p>Концентрація уваги</p>
+            <p>Швидкість мислення</p>
+            <p>Зорово-рухова координація</p>
+          </div>
+        </div>
+        <a href="./ReactionTimeToLight.html" class="animated-link-3"><h2>Перейти →</h2></a>
+      </div>
+
+      <div class="grid-item">
+        <div class="grid-item-test item2">
+          <h2>Реакція на звук</h2>
+          <p>Дізнайся, наскільки швидко реагуєш на звукові сигнали</p>
+          <div class="grid-item-test-tags">
+            <p>Слухова реакція</p>
+            <p>Оперативність дій</p>
+            <p>Нейронна швидкість</p>
+          </div>
+        </div>
+        <a href="./ReactionTimeToSound.html" class="animated-link-3"><h2>Перейти →</h2></a>
+      </div>
+
+      <div class="grid-item">
+        <div class="grid-item-test item3">
+          <h2>Тепінг-тест</h2>
+          <p>Оціни швидкість і точність рухів рук</p>
+          <div class="grid-item-test-tags">
+            <p>Швидкість моторики</p>
+            <p>Ритмічність дій</p>
+            <p>Фізична витривалість</p>
+          </div>
+        </div>
+        <a href="./FingerTapTest.html" class="animated-link-3"><h2>Перейти →</h2></a>
+      </div>
+
+      <div class="grid-item in-dev">
+        <div class="grid-item-test item4">
+          <h2>Таблиці Шульте</h2>
+          <p>Перевір уважність і швидкість пошуку чисел</p>
+          <div class="grid-item-test-tags">
+            <p>Зоровий пошук</p>
+            <p>Швидкість мислення</p>
+            <p>Фокус уваги</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Вебдодаток був розроблений студентом групи СПРм-25-1 — Гузь Андрій Олегович © 2025</p>
+  </div>
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const targetId = params.get('section');
+
+    if (targetId) {
+        window.addEventListener('load', () => {
+            const el = document.getElementById(targetId);
+            if (el) {
+                setTimeout(() => {
+                    el.scrollIntoView({behavior: 'smooth'});
+                }, 200);
+            }
+        });
+    }
+
+    document.getElementById('goToSection').addEventListener('click', () => {
+        window.location.href = 'index.html?section=target';
+    });
+</script>
+
+</body>
+</html>

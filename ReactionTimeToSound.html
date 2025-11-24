@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реакція на звук</title>
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="css/base/pages.css">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+
+  <style>
+      .stats-table td:first-child {
+          width: 180px;
+          font-weight: 600;
+      }
+
+      .stats-table td:last-child {
+          text-align: right;
+          width: 110px;
+      }
+
+      @media (max-width: 480px) {
+          .stats-table td:first-child {
+              width: auto;
+              max-width: 120px;
+              font-size: 14px;
+          }
+
+          .stats-table td:last-child {
+              width: auto;
+              font-size: 14px;
+          }
+      }
+  </style>
+</head>
+
+<body>
+<header class="header">
+  <div class="container">
+    <nav>
+      <div class="header-logo">
+        <a href="./index.html"><img src="./img/logo-light.svg" alt="logo"></a>
+      </div>
+      <ul>
+        <li>
+          <button class="nav-link main-start-button" id="goToSection">
+            <img src="./img/01.svg" alt=""><span>Каталог тестів</span>
+          </button>
+        </li>
+        <li>
+          <a href="./results_page.html" class="nav-link nav-secondary-link">
+            <img src="./img/02.svg" alt=""><span>Мої результати</span>
+          </a>
+        </li>
+        <li>
+          <a href="./about_us.html" class="nav-link nav-secondary-link">
+            <img src="./img/03.svg" alt=""><span>Про проєкт</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="content-block">
+      <h1>Тестування швидкості реакції на звук</h1>
+
+      <span id="counter">Крок 0 / 10</span>
+
+      <span id="screen-message">Розпочніть тест, а потім натискайте на кнопку щоразу, коли почуєте характерний звук</span>
+
+      <button id="main-btn" class="button_inSoundPage">
+        <span id="main-btn-text">Почати тест</span>
+      </button>
+    </div>
+
+    <h3>Статистика</h3>
+
+    <table id="result-table" class="res-table stats-table">
+      <tbody>
+      <tr>
+        <td>Час реакцій</td>
+        <td id="r1-val">-</td>
+      </tr>
+      <tr>
+        <td>Мін/Макс</td>
+        <td id="r2-val">-</td>
+      </tr>
+      <tr>
+        <td>Середнє значення</td>
+        <td id="r3-val">-</td>
+      </tr>
+      <tr>
+        <td>Медіанне значення</td>
+        <td id="r4-val">-</td>
+      </tr>
+      <tr>
+        <td>Середнє відхилення</td>
+        <td id="r5-val">-</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div id="chart-container" style="margin-top: 20px; text-align: center;"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Вебдодаток був розроблений студентом групи СПРм-25-1 — Гузь Андрій Олегович © 2025</p>
+  </div>
+</footer>
+
+<script>
+    document.getElementById('goToSection').addEventListener('click', () => {
+        location.href = 'index.html?section=target';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts/page2.js"></script>
+
+</body>
+</html>

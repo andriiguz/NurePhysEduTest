@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тепінг-Тест</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="css/base/pages.css">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg"/>
+
+  <style>
+      .res-table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      .res-table td:first-child {
+          text-align: left;
+          width: 70%;
+          padding-right: 10px;
+          white-space: nowrap;
+          font-weight: 600;
+      }
+
+      .res-table td:last-child {
+          text-align: right;
+          width: 30%;
+          white-space: nowrap;
+      }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <nav>
+      <div class="header-logo">
+        <a href="./index.html"><img src="./img/logo-light.svg" alt="logo"></a>
+      </div>
+      <ul>
+        <li>
+          <button class="nav-link main-start-button" id="goToSection">
+            <img src="./img/01.svg" alt=""><span>Каталог тестів</span>
+          </button>
+        </li>
+        <li><a href="./results_page.html" class="nav-link nav-secondary-link"><img src="./img/02.svg" alt=""><span>Мої результати</span></a>
+        </li>
+        <li><a href="./about_us.html" class="nav-link nav-secondary-link"><img src="./img/03.svg" alt=""><span>Про проєкт</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="content-block">
+      <h1>Тепінг-тест</h1>
+      <p id="counter">Лічильник натискань: 0</p>
+      <p id="timer">Залишилося секунд: 30,0</p>
+      <p id="screen-message">Розпочніть тест, після чого натискайте на кнопку безперервно протягом 30 секунд</p>
+
+      <button id="main-btn">
+        <span id="main-btn-text">Почати тест</span>
+      </button>
+    </div>
+
+    <h3>Статистика</h3>
+    <table id="stats-table" class="res-table stats-table">
+      <tbody>
+      <tr>
+        <td>Мін/Макс:</td>
+        <td id="stat-minmax">-</td>
+      </tr>
+      <tr>
+        <td>Середнє значення:</td>
+        <td id="stat-mean">-</td>
+      </tr>
+      <tr>
+        <td>Медіанне значення:</td>
+        <td id="stat-median">-</td>
+      </tr>
+      <tr>
+        <td>Середнє відхилення:</td>
+        <td id="stat-std">-</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h3>Кількість натискань у наступних інтервалах:</h3>
+    <table id="result-table" class="res-table interval-table">
+      <tbody>
+      <tr>
+        <td>0–5 сек.</td>
+        <td id="r1-val">-</td>
+      </tr>
+      <tr>
+        <td>6–10 сек.</td>
+        <td id="r2-val">-</td>
+      </tr>
+      <tr>
+        <td>11–15 сек.</td>
+        <td id="r3-val">-</td>
+      </tr>
+      <tr>
+        <td>16–20 сек.</td>
+        <td id="r4-val">-</td>
+      </tr>
+      <tr>
+        <td>21–25 сек.</td>
+        <td id="r5-val">-</td>
+      </tr>
+      <tr>
+        <td>26–30 сек.</td>
+        <td id="r6-val">-</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Вебдодаток був розроблений студентом групи СПРм-25-1 — Гузь Андрій Олегович © 2025</p>
+  </div>
+</footer>
+
+<script>
+    document.getElementById('goToSection').addEventListener('click', () => {
+        window.location.href = 'index.html?section=target';
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts/page3.js"></script>
+</body>
+</html>

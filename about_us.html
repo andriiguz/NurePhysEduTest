@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про проєкт</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg"/>
+  <style>
+      .about-project {
+          margin: 70px 0 40px;
+      }
+
+      .about-title {
+          text-align: center;
+          font-family: Montserrat, sans-serif;
+          font-weight: 700;
+          font-size: 36px;
+          color: #1F845A;
+          margin-bottom: 25px;
+      }
+
+      .about-lead {
+          font-family: "Open Sans", sans-serif;
+          font-size: 20px;
+          line-height: 1.7;
+          color: #333;
+          max-width: 820px;
+          margin: 0 auto 20px;
+          text-align: center;
+      }
+
+      .about-text {
+          font-family: "Open Sans", sans-serif;
+          font-size: 18px;
+          line-height: 1.7;
+          color: #444;
+          max-width: 820px;
+          margin: 0 auto 15px;
+          text-align: center;
+      }
+
+      .about-lead a {
+          font-weight: bold;
+          color: #1F845A;
+          text-decoration: none;
+          border-bottom: 2px dotted #1F845A;
+          transition: all 0.3s ease;
+      }
+
+      .about-lead a:hover {
+          color: #1a6948;
+          border-bottom-color: #1a6948;
+      }
+
+      .about-project p, .about-title {
+          opacity: 0;
+          transform: translateY(10px);
+          animation: fadeUp 0.5s ease forwards;
+      }
+
+      .about-project p:nth-child(2) {
+          animation-delay: .2s;
+      }
+
+      .about-project p:nth-child(3) {
+          animation-delay: .35s;
+      }
+
+      .about-project p:nth-child(4) {
+          animation-delay: .5s;
+      }
+
+      @keyframes fadeUp {
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .features-section {
+          margin: 60px 0;
+      }
+
+      .features-title {
+          text-align: center;
+          margin-bottom: 35px;
+          font-family: Montserrat, sans-serif;
+          font-weight: 700;
+          color: #333;
+          line-height: 1.2;
+      }
+
+      .features-grid {
+          display: grid;
+          grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+          gap: 32px;
+      }
+
+      .feature-item {
+          background: #fff;
+          border: 2px solid #E0E0E0;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          padding: 20px;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .feature-item h3 {
+          font-family: Montserrat, sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          margin-bottom: 12px;
+          line-height: 1.2;
+          color: #22A06B;
+      }
+
+      .feature-item p {
+          font-family: "Open Sans", sans-serif;
+          font-size: 16px;
+          color: #333;
+          line-height: 1.6;
+      }
+
+      .feature-item:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+          border-color: #1F845A;
+      }
+
+      @media (max-width: 600px) {
+          .about-title {
+              font-size: 28px;
+          }
+
+          .about-lead {
+              font-size: 18px;
+          }
+
+          .about-text {
+              font-size: 16px;
+          }
+      }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <nav>
+      <div class="header-logo"><a href="./index.html"><img src="./img/logo-light.svg" alt="logo"></a></div>
+      <ul>
+        <li>
+          <button class="nav-link main-start-button" id="goToSection"><img src="./img/01.svg" alt=""><span>Каталог тестів</span>
+          </button>
+        </li>
+        <li><a href="./results_page.html" class="nav-link nav-secondary-link"><img src="./img/02.svg" alt=""><span>Мої результати</span></a>
+        </li>
+        <li><a href="./about_us.html" class="nav-link nav-secondary-link"><img src="./img/03.svg" alt=""><span>Про проєкт</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="about-project">
+    <div class="container">
+      <h1 class="about-title">Про проєкт</h1>
+      <p class="about-lead">
+        Це інтерактивний вебдодаток для вимірювання різних типів реакції та моторики.
+        У додатку доступні три види тестів:
+        <a href="./ReactionTimeToLight.html">реакція на світло</a>, <a href="./ReactionTimeToSound.html">реакція на
+        звук</a> та <a href="./FingerTapTest.html">тепінг-тест</a>. Вони дозволяють оцінити швидкість нервово-м’язової
+        відповіді, частоту рухів та концентрацію. Дані автоматично зберігаються локально,
+        а результати можна зручно порівнювати та експортувати.
+      </p>
+      <p class="about-text"></p>
+      <p class="about-text">Додаток побудований так, щоб тестування було простим, точним та цікавим — як для
+        навчальних цілей, так і для самоспостереження та експериментів.</p>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <h2 class="features-title">Функціональні можливості</h2>
+      <div class="features-grid">
+        <div class="feature-item"><h3>Швидкі тести</h3>
+          <p>Проведення вимірювання у режимі реального часу з точним фіксуванням натискань</p></div>
+        <div class="feature-item"><h3>Автоматична статистика</h3>
+          <p>Миттєве обчислення мінімуму, максимуму, медіани, середнього та середнього відхилення між значеннями</p>
+        </div>
+        <div class="feature-item"><h3>Візуалізація</h3>
+          <p>Побудова лінійних діаграм одразу після завершення тесту</p></div>
+        <div class="feature-item"><h3>Експорт даних</h3>
+          <p>Зручний імпорт і експорт у форматі JSON для подальшої аналітики</p></div>
+        <div class="feature-item"><h3>Адаптивний інтерфейс</h3>
+          <p>Додаток автоматично підлаштовується під будь-який розмір екрана</p></div>
+        <div class="feature-item"><h3>Історія</h3>
+          <p>Усі вимірювання зберігаються локально у браузері, доступні у будь-який момент</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container"><p>Вебдодаток був розроблений студентом групи СПРм-25-1 — Гузь Андрій Олегович © 2025</p></div>
+</footer>
+
+<script>
+    document.getElementById('goToSection').addEventListener('click', () => {
+        window.location.href = 'index.html?section=target';
+    });
+</script>
+</body>
+</html>
