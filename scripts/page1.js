@@ -36,7 +36,7 @@ function nextRed() {
     waiting = true;
     ready = false;
     btnText.textContent = "Чекайте...";
-    timeoutId = setTimeout(nextGreen, Math.floor(Math.random() * 1650) + 750);
+    timeoutId = setTimeout(nextGreen, Math.floor(Math.random() * 1200) + 1300);
 }
 
 function nextGreen() {

@@ -10,7 +10,7 @@ let ready = false;
 let startTime;
 let timeoutId;
 
-let beep = new Audio("./sounds/beep_short.mp3");
+let beep = new Audio("signal.ogg");
 let reactionChartInstance = null;
 
 button.addEventListener("click", () => {
@@ -34,7 +34,7 @@ function startCycle() {
 function nextWait() {
     waiting = true;
     ready = false;
-    timeoutId = setTimeout(playBeep, Math.floor(Math.random() * 1650) + 750);
+    timeoutId = setTimeout(playBeep, Math.floor(Math.random() * 1200) + 1300);
 }
 
 function playBeep() {
