@@ -10,7 +10,7 @@ let ready = false;
 let startTime;
 let timeoutId;
 
-let beep = new Audio("scripts/signal.ogg");
+let beep = new Audio("./scripts/signal.ogg");
 let reactionChartInstance = null;
 
 button.addEventListener("click", () => {
